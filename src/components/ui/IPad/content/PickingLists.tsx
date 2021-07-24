@@ -9,7 +9,7 @@ const PickingLists = () => {
   const data = state.pickingLists;
   const productNameMap = state.wms.reduce((acc: {[key: string]: string}, value) => {
     if (!acc[value.productCode]) {
-      acc[value.productCode] = value.description;
+      acc[value.productCode] = translations.getTextRaw(value.description);
     };
     return acc;
   }, {});

@@ -13,6 +13,7 @@ import { GameState } from "reducers/gameStateReducer";
 import WarehouseGuy from "./pixi/WarehouseGuy";
 import sound from 'pixi-sound';
 import { PickingList } from "reducers/pickingListsReducer";
+import { useTranslationStore } from "stores/translations";
 
 PixiPlugin.registerPIXI(PIXI);
 gsap.registerPlugin(PixiPlugin);
@@ -31,6 +32,7 @@ export interface Props {
 const Scene = (props: Props & React.ComponentProps<typeof Container>) => {
   const {tilemap, width, height, ...restProps} = props;
   const {state, dispatch} = useContext(AppContext);
+  const translations = useTranslationStore();
   const {warehouse} = state;
 
   const [mapData, setMapData] = useState<TiledMapData>();
@@ -102,7 +104,9 @@ const Scene = (props: Props & React.ComponentProps<typeof Container>) => {
 
     dispatch({ 
       type: 'setStatusText',
-      text: `Selected: ${wmsData.description} (${productCode})`
+      text: translations.getTextRaw("status-selected")
+        .replace("{0}", translations.getTextRaw(wmsData.description))
+        .replace("{1}", productCode)
     });
 
     setSelectedBox(productCode);

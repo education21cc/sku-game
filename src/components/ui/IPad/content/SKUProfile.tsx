@@ -59,12 +59,12 @@ const SKUProfile = (props: Props) => {
       <Fragment key={row.productCode}>
         <tr key={row.productCode} data-code={row.productCode} className={categoryClasses[row.category]}>
           <td>{row.productCode}</td>
-          <td>{row.description}</td>
+          <td>{translations.getText(row.description)}</td>
         </tr>
         {row.pair && (
           <tr key={`${row.productCode}-pair`} data-code={row.productCode} className={categoryClasses[row.category]}>
             <td colSpan={2} className="pair">
-              {translations.getTextRaw("product-pair").replace("{0}", row.pair)}
+              {translations.getTextRaw("frequently-sold-with").replace("{0}", row.pair)}
             </td>
           </tr>
         )}

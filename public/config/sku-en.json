@@ -46,9 +46,50 @@
       "key": "sku-velocity-profile",
       "value": "SKU velocity profile"
     }, {
-      "key": "product-pair",
+      "key": "frequently-sold-with",
       "value": " Frequently sold with {0}"
     }, {
+      "key": "status-selected",
+      "value": "Selected: {0} ({1})"
+    }, {
+      "key": "product-description-clothes-iron",
+      "value": "Clothes iron"
+    }, {
+      "key": "product-description-digital-camera",
+      "value": "Digital camera"
+    }, {
+      "key": "product-description-smoke-detector",
+      "value": "Smoke detector"
+    }, {
+      "key": "product-description-battery-charger",
+      "value": "Battery charger"
+    }, {
+      "key": "product-description-vr-headset",
+      "value": "VR headset"
+    }, {
+      "key": "product-description-plasma-tv",
+      "value": "Plasma TV"
+    }, {
+      "key": "product-description-speaker-system",
+      "value": "Speaker system"
+    }, {
+      "key": "product-description-washing-machine",
+      "value": "Washing machine"
+    }, {
+      "key": "product-description-refrigerator",
+      "value": "Refrigerator"
+    }, {
+      "key": "product-description-mixer",
+      "value": "Stand mixer"
+    }, {
+      "key": "product-description-telephone",
+      "value": "Telephone"
+    }, {
+      "key": "product-description-casette-player",
+      "value": "Cassette player"
+    }, {
+
+
       "key": "order-no",
       "value": "Order no"
     }, {

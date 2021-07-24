@@ -29,53 +29,53 @@ export interface WMSData {
 export const initialWMSState = [{
   category: Categories.A,
   productCode: "IRN 590",
-  description: "Clothes iron",
+  description: "product-description-clothes-iron",
 }, {
   category: Categories.A,
   productCode: "CAM 679",
-  description: "Digital camera",
+  description: "product-description-digital-camera",
 }, {
   category: Categories.A,
   productCode: "SMK 019",
-  description: "Smoke detector",
+  description: "product-description-smoke-detector",
   pair: "BAT 917"
 }, {
   category: Categories.A,
   productCode: "BAT 917",
-  description: "Battery charger",
+  description: "product-description-battery-charger",
   pair: "SMK 019"
 }, {
   category: Categories.B,
   productCode: "VRL 444",
-  description: "VR headset",
+  description: "product-description-vr-headset",
 }, {
   category: Categories.B,
   productCode: "PTV 555",
-  description: "Plasma TV",
+  description: "product-description-plasma-tv",
   pair: "SPK 876"
 }, {
   category: Categories.B,
   productCode: "SPK 876",
-  description: "Speaker system",
+  description: "product-description-speaker-system",
   pair: "PTV 555"
 }, {
   category: Categories.C,
   productCode: "WSH 322",
-  description: "Washing machine",
+  description: "product-description-washing-machine",
 }, {
   category: Categories.C,
   productCode: "RFG 411",
-  description: "Refrigerator",
+  description: "product-description-refrigerator",
 }, {
   category: Categories.C,
   productCode: "SMX 041",
-  description: "Stand mixer",
+  description: "product-description-mixer",
 }, {
   category: Categories.D,
   productCode: "TPH 255",
-  description: "Telephone",
+  description: "product-description-telephone",
 }, {
   category: Categories.D,
   productCode: "CST 964",
-  description: "Cassette player",
+  description: "product-description-casette-player",
 }]
