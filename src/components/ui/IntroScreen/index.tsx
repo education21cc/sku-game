@@ -3,10 +3,11 @@ import React from "react";
 import "./introScreen.css"
 import { AppContext } from "components/context/AppProvider";
 import { GameState } from "reducers/gameStateReducer";
-
+import { useTranslationStore } from "stores/translations";
 
 const IntroScreen = () => {
   const {state, dispatch} = useContext(AppContext);
+  const translations = useTranslationStore();
 
   const onClick = () => {
     dispatch({ type: "startGame" });
@@ -17,28 +18,29 @@ const IntroScreen = () => {
   }
   return (
     <div className="intro-screen">
-        <h1>SKU is the word!</h1>
+        <h1>{translations.getText("intro-header")}</h1>
       <div className="modal">
         <div className="text">
-          The warehouse needs to be filled! Consult the WMS to know what goes where. 
+          {translations.getText("intro-description")}
         </div>
         <div className="trilogy">
           <div>
             <img src={`${process.env.PUBLIC_URL}/images/intro/intro-1.png`} alt="docking area"></img>
-            <p>Take the boxes from the outside area. Check the contents on the WMS.</p>
+            <p>{translations.getText("intro-text1")}</p>
           </div>
           <div>
             <img src={`${process.env.PUBLIC_URL}/images/intro/intro-2.png`} alt="docking area"></img>
-            <p>Place the boxes in the racks in the warehouse. Note the distance of the racks to the outbound area.</p>
+            <p>{translations.getText("intro-text2")}</p>
+            <p></p>
           </div>
           <div>
             <img src={`${process.env.PUBLIC_URL}/images/intro/intro-3.png`} alt="docking area"></img>
-            <p>Some products will not be sold. Place them outside in the discard area.</p>
+            <p>{translations.getText("intro-text3")}</p>
           </div>
         </div>
       </div>
         <button onClick={onClick} className="button">
-          Start
+        {translations.getText("intro-start")}
         </button>
     </div>
   )

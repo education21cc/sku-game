@@ -1,17 +1,19 @@
 import React, { useContext } from "react";
 import { AppContext } from "components/context/AppProvider";
-import './startButton.css';
 import { GameState } from "reducers/gameStateReducer";
+import { useTranslationStore } from "stores/translations";
+import './startButton.css';
 
 const StartButton = () => {
   const { state, dispatch } = useContext(AppContext);
+  const translations = useTranslationStore();
 
   const handleClick = () => {
     switch (state.gameState) {
       case GameState.placingBoxes:
         const allBoxedPlaced = !Object.values(state.warehouse.boxes).some(b => !(b.zone));
         if(!allBoxedPlaced) {
-          dispatch({ type: 'setStatusText', text: "First place all goods in the warehouse!"});
+          dispatch({ type: 'setStatusText', text: translations.getTextRaw("first-place-goods")});
           return;
         }
         dispatch({ type: 'startPicking'});
@@ -26,7 +28,7 @@ const StartButton = () => {
 
   switch (state.gameState) {
     case GameState.placingBoxes:
-      return <button onClick={handleClick} className="start-button"><h1>Complete</h1></button>;
+      return <button onClick={handleClick} className="start-button"><h1>{translations.getText("button-complete")}</h1></button>;
     default:
       return null;
   }

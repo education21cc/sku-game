@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { AppContext } from "components/context/AppProvider";
 import { PickingList } from "reducers/pickingListsReducer";
+import { useTranslationStore } from "stores/translations";
 
 const PickingLists = () => {
   const { state } = useContext(AppContext);
+  const translations = useTranslationStore();
   const data = state.pickingLists;
   const productNameMap = state.wms.reduce((acc: {[key: string]: string}, value) => {
     if (!acc[value.productCode]) {
@@ -11,19 +13,6 @@ const PickingLists = () => {
     };
     return acc;
   }, {});
-  // useEffect(() => {
-  //   if (!tableRef.current) return;
-  //   const table = tableRef.current;
-    
-  //   // add highlight class 
-  //   const row = table.querySelector(`tr[data-code="${props.selectedProduct}"]`)
-  //   row?.classList.add("highlight");
-  //   row?.scrollIntoView({ block: 'end'});
-  //   return () => {
-  //   // Remove highlight class from prevously highlighted row
-  //     table.querySelector(".highlight")?.classList.remove("highlight");
-  //   }
-  // }, [props.selectedProduct]);
 
   const renderContent = () => {
     return (
@@ -40,7 +29,7 @@ const PickingLists = () => {
       <table>
         <tbody>
           <tr>
-            <td colSpan={3}>Order no: {pList.orderNo}</td>
+            <td colSpan={3}>{translations.getText("order-no")}: {pList.orderNo}</td>
           </tr>
           { pList.products.map(p => renderProduct(pList, p)) }
         </tbody>
@@ -62,7 +51,7 @@ const PickingLists = () => {
 
   return (
     <>
-      <h2>Picking lists</h2>
+      <h2>{translations.getText("picking-lists")}</h2>
       {renderContent()}
     </>
   )

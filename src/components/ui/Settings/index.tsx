@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
-import './settings.css';
 import { AppContext } from "components/context/AppProvider";
+import { useTranslationStore } from "stores/translations";
+import './settings.css';
 
 const Settings = () => {
   const { state, dispatch } = useContext(AppContext);
+  const translations = useTranslationStore();
+
 
   const handleMutedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'setMuted', value: !e.target.checked})  
@@ -16,7 +19,7 @@ const Settings = () => {
   return (
     <div className="settings">
       <input type="checkbox" onChange={handleMutedChange} checked={state.muted === false} />
-      <label>Sound on</label>
+      <label>{translations.getText("sound-on")}</label>
     </div>
   )
 }

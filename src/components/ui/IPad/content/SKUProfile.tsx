@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useContext, Fragment } from "react";
 import { AppContext } from "components/context/AppProvider";
 import { Categories, WMSData } from "reducers/wmsReducer";
+import { useTranslationStore } from "stores/translations";
 
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 const SKUProfile = (props: Props) => {
   const tableRef = useRef<HTMLTableElement>(null);
   const { state } = useContext(AppContext);
+  const translations = useTranslationStore();
   const data = state.wms;
 
   useEffect(() => {
@@ -33,13 +35,13 @@ const SKUProfile = (props: Props) => {
     return (
       <table ref={tableRef}>
         <tbody>
-        <tr><th colSpan={2} className="category-header-a">A. Fast-moving</th></tr>
+        <tr><th colSpan={2} className="category-header-a">{translations.getText("category-header-a")}</th></tr>
         {data.filter(row => row.category === Categories.A).map(row => renderRow(row))}
-        <tr><th colSpan={2} className="category-header-b">B. Medium-moving</th></tr>
+        <tr><th colSpan={2} className="category-header-b">{translations.getText("category-header-b")}</th></tr>
         {data.filter(row => row.category === Categories.B).map(row => renderRow(row))}
-        <tr><th colSpan={2} className="category-header-c">C. Slow-moving</th></tr>
+        <tr><th colSpan={2} className="category-header-c">{translations.getText("category-header-c")}</th></tr>
         {data.filter(row => row.category === Categories.C).map(row => renderRow(row))}
-        <tr><th colSpan={2} className="category-header-d">D. Not-moving</th></tr>
+        <tr><th colSpan={2} className="category-header-d">{translations.getText("category-header-d")}</th></tr>
         {data.filter(row => row.category === Categories.D).map(row => renderRow(row))}
         </tbody>
       </table>
@@ -62,7 +64,7 @@ const SKUProfile = (props: Props) => {
         {row.pair && (
           <tr key={`${row.productCode}-pair`} data-code={row.productCode} className={categoryClasses[row.category]}>
             <td colSpan={2} className="pair">
-              {` Frequently sold with ${row.pair}`}
+              {translations.getTextRaw("product-pair").replace("{0}", row.pair)}
             </td>
           </tr>
         )}
@@ -71,7 +73,7 @@ const SKUProfile = (props: Props) => {
   }
   return (
     <>
-      <h2>SKU velocity profile</h2>
+      <h2>{translations.getText("sku-velocity-profile")}</h2>
       {renderContent()}
     </>
   )

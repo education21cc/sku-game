@@ -2,12 +2,14 @@ import { useContext, useState, useEffect, useMemo, memo, Fragment } from "react"
 import React from "react";
 import { GameState } from "reducers/gameStateReducer";
 import { AppContext } from "components/context/AppProvider";
-import "./gameOverScreen.css"
 import { formatTime } from "../StatusText";
 import { Categories, WMSData } from "reducers/wmsReducer";
+import { useTranslationStore } from "stores/translations";
+import "./gameOverScreen.css"
 
 const GameOverScreen = () => {
   const { state, dispatch } = useContext(AppContext);
+  const translations = useTranslationStore();
   const [show, setShow] = useState(false); 
 
   const handleReset = () => {
@@ -76,16 +78,16 @@ const GameOverScreen = () => {
       totalScore += points;
       return (
         <Fragment key={pair.toString()}>
-          <div>Pair: {`${pair}`}</div>
-          <div>Placed next to each other</div>
+          <div>{translations.getText("gameover-pair")}{`${pair}`}</div>
+          <div>{translations.getText("gameover-pair-placed")}</div>
           <div>{`${points}/3`}</div>
         </Fragment>
       )
     }
     return (
       <Fragment key={pair.toString()}>
-        <div>Pair: {`${pair}`}</div>
-        <div>Not placed next to each other</div>
+          <div>{translations.getText("gameover-pair")}{`${pair}`}</div>
+          <div>{translations.getText("gameover-pair-notplaced")}</div>
         <div>{`${points}/3`}</div>
       </Fragment>
     )
@@ -114,8 +116,8 @@ const GameOverScreen = () => {
     totalScore += points;
     return (
       <>
-        <div>Non moving products</div>
-        <div>{`${mistakes} mistakes made`}</div>
+        <div>{translations.getText("gameover-non-moving-products")}</div>
+        <div>{`${mistakes} ${translations.getText("gameover-mistakes-made")}`}</div>
         <div>{`${points}`}</div>
       </>
     )
@@ -125,25 +127,25 @@ const GameOverScreen = () => {
     if (totalScore === maxScore) {
       return (
         <span className="success">
-          Good job! You reduced the travel time in the warehouse by choosing the most optimum storage locations for the goods.
+          {translations.getText("gameover-success")}
         </span>
       )
     }
     return (
       <span className="fail">
-        Oh no! The storage locations you chose for the goods are not optimum and increased the travel time in the warehouse.
+        {translations.getText("gameover-fail")}
       </span>
     )
   }
 
   return (
     <div className="gameover-screen">
-        <h1>Scoreboard</h1>
+      <h1>{translations.getText("gameover-header")}</h1>
       <div className="modal">
         <div className="table">
-          <div className="table-header">Products</div>
-          <div className="table-header">Result</div>
-          <div className="table-header">Score</div>
+          <div className="table-header">{translations.getText("gameover-header-products")}</div>
+          <div className="table-header">{translations.getText("gameover-header-result")}</div>
+          <div className="table-header">{translations.getText("gameover-header-score")}</div>
           {getProductRow("Fast moving products", Categories.A)}
           {getProductRow("Medium moving products", Categories.B)}
           {getProductRow("Slow moving products", Categories.C)}
@@ -157,13 +159,13 @@ const GameOverScreen = () => {
             Your time: {formatTime(state.time)}
           </div> */}
           <div className="table-footer">
-            Total: 
+            {translations.getText("gameover-total")}
             <b>{totalScore}</b>
           </div>
         </div>
       </div>
         <button onClick={handleReset} className="button">
-          Try again?
+          {translations.getText("gameover-button-reset")}
         </button>
     </div>
   )

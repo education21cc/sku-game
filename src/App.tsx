@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import React, { useState, useContext, useEffect, useRef, useCallback } from 'react';
 import './App.css';
 import Scene from 'components/Scene';
 import * as PIXI  from 'pixi.js';
@@ -11,6 +11,8 @@ import GameOverScreen from 'components/ui/GameOverScreen';
 import IntroScreen from 'components/ui/IntroScreen';
 import PlayerBridge from 'components/playerBridge';
 import { GameData } from 'components/playerBridge/GameData';
+import { useTranslationStore } from 'stores/translations';
+import { AppState } from 'appState';
 window.PIXI = PIXI;
 
 const INITIAL_WIDTH = 960;
@@ -49,6 +51,38 @@ function App() {
     }
   }, []);
 
+
+  const handleGameDataReceived = useCallback((data: GameData<any>) => {
+    // setData(data);
+    // setCards(data?.content?.sort(() => Math.random() - 0.5));
+    // setState(GameState.intro)
+
+    if (data.translations){
+      const t = data.translations.reduce<{[key: string]: string}>((acc, translation) => {
+        acc[translation.key] = translation.value;
+        return acc;
+      }, {});
+      useTranslationStore.setState({ texts: t });
+    }
+
+  }, []);
+
+  useEffect(() => {
+    // See if we are fed gamedata by 21ccplayer app, if not, go fetch it ourselves
+    if (!process.env.REACT_APP_PLAYER_MODE) {
+      // @ts-ignore
+      console.log("no bridge found, fetching fallback")      
+// 
+      fetch(`${process.env.PUBLIC_URL}/config/sku-en.json`)
+      .then((response) => {
+        response.json().then((data) => {
+          handleGameDataReceived(data);
+        })
+      })
+    };
+  }, [handleGameDataReceived]);
+
+
   return (
     <>
       <AppProvider>
@@ -77,7 +111,7 @@ export default App;
 const AppAwareBridge = () => {
   const {dispatch} = useContext(AppContext);
 
-  const handleGameDataReceived = (data: GameData) => {
+  const handleGameDataReceived = (data: GameData<AppState>) => {
     if (data.content.wms) {
       dispatch({ type: 'setWMS', wms: data.content.wms });
     }
