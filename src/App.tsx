@@ -13,6 +13,7 @@ import PlayerBridge from 'components/playerBridge';
 import { GameData } from 'components/playerBridge/GameData';
 import { useTranslationStore } from 'stores/translations';
 import { AppState } from 'appState';
+import Loading from 'components/playerBridge/Loading';
 window.PIXI = PIXI;
 
 const INITIAL_WIDTH = 960;
@@ -25,10 +26,12 @@ function App() {
 
   const [selectedProduct, setSelectedProduct] = useState<string>();
   const ref = useRef<HTMLDivElement>(null);
+  const translations = useTranslationStore();
 
   useEffect(() => {
     // when width or height of window is smaller than INITIAL_WIDTH or INITIAL_HEIGHT, scale down
     const resize = () => {
+      if (!ref.current) return
       if(window.innerWidth - INITIAL_WIDTH < 0 || window.innerHeight - INITIAL_HEIGHT < 0){
         const diffW = window.innerWidth - INITIAL_WIDTH;
         const diffH =  window.innerHeight - INITIAL_HEIGHT;
@@ -39,9 +42,9 @@ function App() {
         } else {
           scale =  window.innerHeight / INITIAL_HEIGHT;
         }
-        ref.current!.style.transform = `scale(${scale}) translate(-50%, -50%)`;
+        ref.current.style.transform = `scale(${scale}) translate(-50%, -50%)`;
       } else {
-        ref.current!.style.transform = 'translate(-50%, -50%)';
+        ref.current.style.transform = 'translate(-50%, -50%)';
       }
     }
     resize();
@@ -81,26 +84,31 @@ function App() {
       })
     };
   }, [handleGameDataReceived]);
-
+  const loading = Object.values(translations.texts).length === 0;
 
   return (
     <>
       <AppProvider>
         <AppAwareBridge />
-        <div className="App" ref={ref}>
-          <Settings />
-          <Scene 
-            tilemap="scenes/level2.json" 
-            width={width} 
-            height={height}
-            onProductClick={setSelectedProduct}
-          />
-          <IPad selectedProduct={selectedProduct}/>
-          <StartButton />
-          <StatusText />
-          <IntroScreen />
-          <GameOverScreen />
-        </div>
+        {(loading) && (          
+          <Loading />
+        )}
+        {!loading && (
+          <div className="App" ref={ref}>
+            <Settings />
+            <Scene 
+              tilemap="scenes/level2.json" 
+              width={width} 
+              height={height}
+              onProductClick={setSelectedProduct}
+            />
+            <IPad selectedProduct={selectedProduct}/>
+            <StartButton />
+            <StatusText />
+            <IntroScreen />
+            <GameOverScreen />
+          </div>
+        )}
       </AppProvider>
     </>
   );
