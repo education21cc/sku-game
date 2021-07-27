@@ -1,0 +1,145 @@
+{
+    "userId":2,
+    "settings":{
+      "muted": false    
+    },
+    "content":[
+     ], 
+    "levelsCompleted":[],
+    "translations":[{
+        "key": "intro-header",
+        "value": "SKU is the word!"
+    }, {
+        "key": "intro-description",
+        "value": "The warehouse needs to be filled! Consult the WMS to know what goes where."
+    }, {
+      "key": "intro-text1",
+      "value": "Take the boxes from the outside area. Check the contents on the WMS."
+    }, {
+      "key": "intro-text2",
+      "value": "Place the boxes in the racks in the warehouse. Note the distance of the racks to the outbound area."
+    }, {
+      "key": "intro-text3",
+      "value": "Some products will not be sold. Place them outside in the discard area."
+    }, {
+      "key": "intro-start",
+      "value": "Start"
+    }, {
+      "key": "sound-on",
+      "value": "Sound on"
+    }, {
+      "key": "button-complete",
+      "value": "Complete"
+    }, {
+      "key": "category-header-a",
+      "value": "A. Fast-moving"
+    }, {
+      "key": "category-header-b",
+      "value": "B. Medium-moving"
+    }, {
+      "key": "category-header-c",
+      "value": "C. Slow-moving"
+    }, {
+      "key": "category-header-d",
+      "value": "D. Not-moving"
+    }, {
+      "key": "sku-velocity-profile",
+      "value": "SKU velocity profile"
+    }, {
+      "key": "frequently-sold-with",
+      "value": " Frequently sold with {0}"
+    }, {
+      "key": "status-selected",
+      "value": "Selected: {0} ({1})"
+    }, {
+      "key": "product-description-clothes-iron",
+      "value": "Clothes iron"
+    }, {
+      "key": "product-description-digital-camera",
+      "value": "Digital camera"
+    }, {
+      "key": "product-description-smoke-detector",
+      "value": "Smoke detector"
+    }, {
+      "key": "product-description-battery-charger",
+      "value": "Battery charger"
+    }, {
+      "key": "product-description-vr-headset",
+      "value": "VR headset"
+    }, {
+      "key": "product-description-plasma-tv",
+      "value": "Plasma TV"
+    }, {
+      "key": "product-description-speaker-system",
+      "value": "Speaker system"
+    }, {
+      "key": "product-description-washing-machine",
+      "value": "Washing machine"
+    }, {
+      "key": "product-description-refrigerator",
+      "value": "Refrigerator"
+    }, {
+      "key": "product-description-mixer",
+      "value": "Stand mixer"
+    }, {
+      "key": "product-description-telephone",
+      "value": "Telephone"
+    }, {
+      "key": "product-description-casette-player",
+      "value": "Cassette player"
+    }, {
+
+
+      "key": "order-no",
+      "value": "Order no"
+    }, {
+      "key": "picking-lists",
+      "value": "Picking lists"
+    }, {
+      "key": "first-place-goods",
+      "value": "First place all goods in the warehouse!"
+    }, {
+      "key": "gameover-pair",
+      "value": "Pair:"
+    }, {
+      "key": "gameover-pair-placed",
+      "value": "Placed next to each other"
+    }, {
+      "key": "gameover-pair-notplaced",
+      "value": "Not placed next to each other"
+    }, {
+      "key": "gameover-pair-notplaced",
+      "value": "Not placed next to each other"
+    }, {
+      "key": "gameover-non-moving-products",
+      "value": "Non moving products"
+    }, {
+      "key": "gameover-mistakes-made",
+      "value": "mistakes made"
+    }, {
+      "key": "gameover-success",
+      "value": "Good job! You reduced the travel time in the warehouse by choosing the most optimum storage locations for the goods."
+    }, {
+      "key": "gameover-fail",
+      "value": "Oh no! The storage locations you chose for the goods are not optimum and increased the travel time in the warehouse."
+    }, {
+      "key": "gameover-header",
+      "value": "Scoreboard"
+    }, {
+      "key": "gameover-header-products",
+      "value": "Products"
+    }, {
+      "key": "gameover-header-result",
+      "value": "Result"
+    }, {
+      "key": "gameover-header-score",
+      "value": "Score"
+    }, {
+      "key": "gameover-total",
+      "value": "Total: "
+    }, {
+      "key": "gameover-button-reset",
+      "value": "Try again?"
+    }
+  ]
+}
