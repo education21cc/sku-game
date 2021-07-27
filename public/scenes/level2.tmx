@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.4" orientation="orthogonal" renderorder="right-down" width="21" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="45">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="21" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="15" nextobjectid="45">
  <editorsettings>
   <export target="level2.json" format="json"/>
  </editorsettings>
@@ -123,22 +123,22 @@
   </object>
   <object id="23" type="rack" gid="38" x="512" y="224" width="32" height="32">
    <properties>
-    <property name="zone" value="B"/>
+    <property name="zone" value="A"/>
    </properties>
   </object>
   <object id="24" type="rack" gid="38" x="544" y="224" width="32" height="32">
    <properties>
-    <property name="zone" value="B"/>
+    <property name="zone" value="A"/>
    </properties>
   </object>
   <object id="25" type="rack" gid="38" x="512" y="288" width="32" height="32">
    <properties>
-    <property name="zone" value="B"/>
+    <property name="zone" value="A"/>
    </properties>
   </object>
   <object id="26" type="rack" gid="38" x="544" y="288" width="32" height="32">
    <properties>
-    <property name="zone" value="B"/>
+    <property name="zone" value="A"/>
    </properties>
   </object>
   <object id="27" type="dock" gid="38" x="608" y="64" width="32" height="32"/>
