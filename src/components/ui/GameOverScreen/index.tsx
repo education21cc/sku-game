@@ -51,7 +51,8 @@ const GameOverScreen = () => {
       if (value.category === category) {
         total++;
         const {zone} = state.warehouse.boxes[value.productCode];
-        if (zone === category.toString()){
+          if (zone === category.toString() || (category === Categories.C && zone === "B")){
+          // there are 3 category B items and 4 category B zones so one category C item ccan be placed in "B"
           correct++;
         }
       }
