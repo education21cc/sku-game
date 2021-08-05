@@ -59,7 +59,6 @@ function App() {
     // setData(data);
     // setCards(data?.content?.sort(() => Math.random() - 0.5));
     // setState(GameState.intro)
-
     if (data.translations){
       const t = data.translations.reduce<{[key: string]: string}>((acc, translation) => {
         acc[translation.key] = translation.value;
@@ -76,7 +75,8 @@ function App() {
       // @ts-ignore
       console.log("no bridge found, fetching fallback")      
 // 
-      fetch(`${process.env.PUBLIC_URL}/config/sku-en.json`)
+      // fetch(`${process.env.PUBLIC_URL}/config/sku-en.json`)
+      fetch(`${process.env.PUBLIC_URL}/config/sku-nl.json`)
       .then((response) => {
         response.json().then((data) => {
           handleGameDataReceived(data);
@@ -118,7 +118,7 @@ export default App;
 
 const AppAwareBridge = () => {
   const {dispatch} = useContext(AppContext);
-
+  
   const handleGameDataReceived = (data: GameData<AppState>) => {
     if (data.content.wms) {
       dispatch({ type: 'setWMS', wms: data.content.wms });
@@ -128,6 +128,14 @@ const AppAwareBridge = () => {
     }
     dispatch({ type: 'restart'}); // ensure the warehouse state gets reinitialized based on the current WMS
     dispatch({ type: 'intro'});
+
+    if (data.translations){
+      const t = data.translations.reduce<{[key: string]: string}>((acc, translation) => {
+        acc[translation.key] = translation.value;
+        return acc;
+      }, {});
+      useTranslationStore.setState({ texts: t });
+    }
   }
 
   return (
