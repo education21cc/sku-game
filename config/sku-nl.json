@@ -1,0 +1,14 @@
+{
+    "userId":2,
+    "settings":{
+      "muted": false    
+    },
+    "content":[
+     ], 
+    "levelsCompleted":[],
+    "translations":[{
+      "key": "gameover-fail",
+      "value": "Oh no! The storage locations you chose for the goods are not optimum and increased the travel time in the warehouse." 
+    }
+  ]
+}
