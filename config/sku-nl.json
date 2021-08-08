@@ -6,9 +6,182 @@
     "content":[
      ], 
     "levelsCompleted":[],
-    "translations":[{
-      "key": "gameover-fail",
-      "value": "Oh no! The storage locations you chose for the goods are not optimum and increased the travel time in the warehouse." 
-    }
+    "translations": [
+      {
+          "key": "intro-header",
+          "value": "ABC Analyse"
+      },
+      {
+          "key": "intro-description",
+          "value": "De goederen moeten op de juiste plek in het warehouse worden geplaatst. Kijk op de lijst in het WMS wat A, B of C producten zijn. "
+      },
+      {
+          "key": "intro-text1",
+          "value": "Pak de dozen die bovenaan staan te wachten één voor één. Check op de lijst aan de rechterkant wat de inhoud is."
+      },
+      {
+          "key": "intro-text2",
+          "value": "Plaats de dozen in de schappen en zorg voor zo kort mogelijke looproutes naar de expeditieruimte (outbound)"
+      },
+      {
+          "key": "intro-text3",
+          "value": "Sommige producten worden nauwelijks verkocht. Plaats die aan de linkerkant."
+      },
+      {
+          "key": "intro-start",
+          "value": "Start"
+      },
+      {
+          "key": "sound-on",
+          "value": "Geluid aan"
+      },
+      {
+          "key": "button-complete",
+          "value": "Klaar"
+      },
+      {
+          "key": "category-header-a",
+          "value": "A. Fast movers, vaak verkocht"
+      },
+      {
+          "key": "category-header-b",
+          "value": "B. Medium movers"
+      },
+      {
+          "key": "category-header-c",
+          "value": "C. Slow movers, weinig verkocht"
+      },
+      {
+          "key": "category-header-d",
+          "value": "D. Worden niet verkocht"
+      },
+      {
+          "key": "sku-velocity-profile",
+          "value": "ABC overzicht"
+      },
+      {
+          "key": "frequently-sold-with",
+          "value": "Vaak verkocht met {0}"
+      },
+      {
+          "key": "status-selected",
+          "value": "Geselecteerd: {0} ({1})"
+      },
+      {
+          "key": "product-description-clothes-iron",
+          "value": "Kleren"
+      },
+      {
+          "key": "product-description-digital-camera",
+          "value": "Digitale camera"
+      },
+      {
+          "key": "product-description-smoke-detector",
+          "value": "Rookmelder"
+      },
+      {
+          "key": "product-description-battery-charger",
+          "value": "Batterij oplader"
+      },
+      {
+          "key": "product-description-vr-headset",
+          "value": "VR Headset"
+      },
+      {
+          "key": "product-description-plasma-tv",
+          "value": "Plasma TV"
+      },
+      {
+          "key": "product-description-speaker-system",
+          "value": "Speakers"
+      },
+      {
+          "key": "product-description-washing-machine",
+          "value": "Wasmachine"
+      },
+      {
+          "key": "product-description-refrigerator",
+          "value": "Koelkast"
+      },
+      {
+          "key": "product-description-mixer",
+          "value": "Staafmixer"
+      },
+      {
+          "key": "product-description-telephone",
+          "value": "Mobiele telefoon"
+      },
+      {
+          "key": "product-description-casette-player",
+          "value": "DVD speler"
+      },
+      {
+          "key": "order-no",
+          "value": "Ordernr."
+      },
+      {
+          "key": "picking-lists",
+          "value": "Picklijst"
+      },
+      {
+          "key": "first-place-goods",
+          "value": "Als eerste: plaats alle dozen in het warehouse"
+      },
+      {
+          "key": "gameover-pair",
+          "value": "Gelijk:"
+      },
+      {
+          "key": "gameover-pair-placed",
+          "value": "Naast elkaar geplaatst"
+      },
+      {
+          "key": "gameover-pair-notplaced",
+          "value": "Niet naast elkaar geplaatst"
+      },
+      {
+          "key": "gameover-pair-notplaced",
+          "value": "Niet naast elkaar geplaatst"
+      },
+      {
+          "key": "gameover-non-moving-products",
+          "value": "Niet verkochte producten"
+      },
+      {
+          "key": "gameover-mistakes-made",
+          "value": "Fouten gemaakt"
+      },
+      {
+          "key": "gameover-success",
+          "value": "Goed gedaan! Je hebt de pickroutes heel kort gemaakt."
+      },
+      {
+          "key": "gameover-fail",
+          "value": "Oh nee! De pickroutes zijn te lang."
+      },
+      {
+          "key": "gameover-header",
+          "value": "Scorebord"
+      },
+      {
+          "key": "gameover-header-products",
+          "value": "Producten"
+      },
+      {
+          "key": "gameover-header-result",
+          "value": "Resultaat"
+      },
+      {
+          "key": "gameover-header-score",
+          "value": "Score  "
+      },
+      {
+          "key": "gameover-total",
+          "value": "Totaal:"
+      },
+      {
+          "key": "gameover-button-reset",
+          "value": "Opnieuw?"
+      }
   ]
 }
