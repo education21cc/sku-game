@@ -99,8 +99,16 @@
       "key": "first-place-goods",
       "value": "First place all goods in the warehouse!"
     }, {
+      
+      "key": "gameover-placed-correct",
+      "value": "First place all goods in the warehouse!"
+    }, {
+
       "key": "gameover-pair",
       "value": "Pair:"
+    }, {
+      "key": "gameover-placed-correct",
+      "value": "{count} placed correct"
     }, {
       "key": "gameover-pair-placed",
       "value": "Placed next to each other"

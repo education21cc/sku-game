@@ -62,7 +62,7 @@ const GameOverScreen = () => {
     return (
       <>
         <div>{`${display} `}</div>
-        <div>{`${points} placed correct`}</div>
+        <div>{translations.getTextRaw("gameover-placed-correct").replace("{count}", points.toString())}</div>
         <div>{`${points}/${total}`}</div>
       </>
     )
@@ -147,9 +147,9 @@ const GameOverScreen = () => {
           <div className="table-header">{translations.getText("gameover-header-products")}</div>
           <div className="table-header">{translations.getText("gameover-header-result")}</div>
           <div className="table-header">{translations.getText("gameover-header-score")}</div>
-          {getProductRow("Fast moving products", Categories.A)}
-          {getProductRow("Medium moving products", Categories.B)}
-          {getProductRow("Slow moving products", Categories.C)}
+          {getProductRow(translations.getTextRaw("category-header-a"), Categories.A)}
+          {getProductRow(translations.getTextRaw("category-header-b"), Categories.B)}
+          {getProductRow(translations.getTextRaw("category-header-c"), Categories.C)}
           {pairs.map(p => getPairRow(p))}
           {getBinRow()}
 
