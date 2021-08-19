@@ -47,7 +47,7 @@ function App() {
         ref.current.style.transform = 'translate(-50%, -50%)';
       }
     }
-    resize();
+    setTimeout(resize, 500)
     window.addEventListener('resize', resize);
     return () => {
       window.removeEventListener('resize', resize);

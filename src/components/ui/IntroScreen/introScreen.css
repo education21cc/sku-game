@@ -16,6 +16,7 @@
   margin-top: 6px;
 }
 
+
 .intro-screen .modal {
   /* width: calc(100% - 32px);
   height: calc(100% - 32px); */
@@ -39,12 +40,11 @@
 
 .intro-screen .modal .trilogy div {
   flex-basis: 0;
-  font-size: smaller;
 }
 
 .intro-screen .button {
   text-align: center;
-  margin-top: 16px;
+  margin-top: -16px;
   margin-bottom: 16px;
   padding: 12px 32px;
   background: #82BC5D;
