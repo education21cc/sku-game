@@ -132,6 +132,9 @@
           "value": "Gelijk:"
       },
       {
+        "key": "gameover-placed-correct",
+        "value": "{count} correct geplaatst"
+     }, {
           "key": "gameover-pair-placed",
           "value": "Naast elkaar geplaatst"
       },

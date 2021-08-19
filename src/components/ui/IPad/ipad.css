@@ -7,14 +7,14 @@
 }
 
 .ipad .content {
-  left: 35px;
-  top: 38px;
+  left: 16px;
+  top: 16px;
   position: absolute;
-  width: 223px;
-  height: 297px;
+  width: 258px;
+  height: 339px;
   overflow-y: scroll;
   box-sizing: border-box;
-  font-size: x-small;
+  font-size: small;
   background: white;
 }
 
