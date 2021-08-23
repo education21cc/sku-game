@@ -6,6 +6,7 @@ import { formatTime } from "../StatusText";
 import { Categories, WMSData } from "reducers/wmsReducer";
 import { useTranslationStore } from "stores/translations";
 import "./gameOverScreen.css"
+import { send } from "components/playerBridge";
 
 const GameOverScreen = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -25,6 +26,22 @@ const GameOverScreen = () => {
 
   let totalScore = 0;
   const maxScore = 16;
+
+
+  useEffect(() => {
+    if (!show)   return;
+    const level = 1;
+    // @ts-ignore
+    const newData: GameData = { ...window.GAMEDATA};
+    newData.levelsCompleted = [
+        { level, score: totalScore, maxScore }
+    ]
+    console.log(newData);
+    send({
+        type: 'setGameData',
+        data: newData
+    });
+  }, [show, totalScore]);
 
   // Create array of pairs (arrays)
   const pairs = useMemo(() => {
@@ -124,6 +141,7 @@ const GameOverScreen = () => {
     )
   }
 
+  
   const renderSummary = () => {
     if (totalScore === maxScore) {
       return (
