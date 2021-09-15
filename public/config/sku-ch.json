@@ -9,179 +9,179 @@
     "translations": [
         {
             "key": "intro-header",
-            "value": "ABC Analyse"
+            "value": "就是这个词 SKU！"
         },
         {
             "key": "intro-description",
-            "value": "De goederen moeten op de juiste plek in het warehouse worden opgeslagen. Kijk op de lijst in het WMS wat A, B of C producten zijn (fast-, medium-, slow movers). "
+            "value": "仓库需要填满！ 咨询 WMS 仓储管理系统以了解该放去哪里。"
         },
         {
             "key": "intro-text1",
-            "value": "Pak de dozen uit de rij bovenaan. Check in het WMS (lijst aan de rechterkant) wat de inhoud is."
+            "value": "从外区拿进箱子。 检查 WMS 仓储管理系统上的内容。"
         },
         {
             "key": "intro-text2",
-            "value": "Plaats de dozen in de schappen en zorg voor zo kort mogelijke looproutes naar de uitgang (outbound)"
+            "value": "将箱子放在仓库的架子上。 注意从机架到出库区域的距离。"
         },
         {
             "key": "intro-text3",
-            "value": "Sommige producten worden niet verkocht. Plaats die buiten het warehouse, aan de linkerkant."
+            "value": "有些产品将不会被出售。 将它们放在弃牌区之外。"
         },
         {
             "key": "intro-start",
-            "value": "Start"
+            "value": "开始"
         },
         {
             "key": "sound-on",
-            "value": "Geluid aan"
+            "value": "声音开启"
         },
         {
             "key": "button-complete",
-            "value": "Klaar"
+            "value": "完成"
         },
         {
             "key": "category-header-a",
-            "value": "A. Fast movers, vaak verkocht"
+            "value": "A. 快速移动"
         },
         {
             "key": "category-header-b",
-            "value": "B. Medium movers"
+            "value": "B. 中等移动"
         },
         {
             "key": "category-header-c",
-            "value": "C. Slow movers, weinig verkocht"
+            "value": "C. 缓慢移动"
         },
         {
             "key": "category-header-d",
-            "value": "D. Niet verkocht"
+            "value": "D. 不动"
         },
         {
             "key": "sku-velocity-profile",
-            "value": "ABC overzicht"
+            "value": "SKU 速度曲线"
         },
         {
             "key": "frequently-sold-with",
-            "value": "Vaak verkocht met {0}"
+            "value": "经常与 {0} 一起出售"
         },
         {
             "key": "status-selected",
-            "value": "Geselecteerd: {0} ({1})"
+            "value": "已选择：{0} ({1})"
         },
         {
             "key": "product-description-clothes-iron",
-            "value": "Kleren"
+            "value": "衣服熨斗"
         },
         {
             "key": "product-description-digital-camera",
-            "value": "Digitale camera"
+            "value": "数码相机"
         },
         {
             "key": "product-description-smoke-detector",
-            "value": "Rookmelder"
+            "value": "烟雾探测器"
         },
         {
             "key": "product-description-battery-charger",
-            "value": "Batterij oplader"
+            "value": "充电器"
         },
         {
             "key": "product-description-vr-headset",
-            "value": "VR Headset"
+            "value": "虚拟耳机"
         },
         {
             "key": "product-description-plasma-tv",
-            "value": "Plasma TV"
+            "value": "等离子电视"
         },
         {
             "key": "product-description-speaker-system",
-            "value": "Speakers"
+            "value": "扬声器系统"
         },
         {
             "key": "product-description-washing-machine",
-            "value": "Wasmachine"
+            "value": "洗衣机"
         },
         {
             "key": "product-description-refrigerator",
-            "value": "Koelkast"
+            "value": "冰箱"
         },
         {
             "key": "product-description-mixer",
-            "value": "Staafmixer"
+            "value": "立式搅拌机"
         },
         {
             "key": "product-description-telephone",
-            "value": "Telefoon"
+            "value": "电话"
         },
         {
             "key": "product-description-casette-player",
-            "value": "Casette recorder"
+            "value": "卡带机"
         },
         {
             "key": "order-no",
-            "value": "Ordernr."
+            "value": "订单号"
         },
         {
             "key": "picking-lists",
-            "value": "Picklijst"
+            "value": "提货单"
         },
         {
             "key": "first-place-goods",
-            "value": "Als eerste: plaats alle dozen in het warehouse"
+            "value": "首先将所有货物放入仓库！"
         },
         {
             "key": "gameover-placed-correct",
-            "value": "{count} goed geplaatst"
+            "value": "{计数} 放置正确"
         },
         {
             "key": "gameover-pair",
-            "value": "Paar:"
+            "value": "一对："
         },
         {
             "key": "gameover-pair-placed",
-            "value": "Naast elkaar geplaatst"
+            "value": "并列放置"
         },
         {
             "key": "gameover-pair-notplaced",
-            "value": "Niet naast elkaar geplaatst"
+            "value": "不相邻放置"
         },
         {
             "key": "gameover-non-moving-products",
-            "value": "Niet verkochte producten"
+            "value": "非移动产品"
         },
         {
             "key": "gameover-mistakes-made",
-            "value": "Fouten gemaakt"
+            "value": "所犯的错误"
         },
         {
             "key": "gameover-success",
-            "value": "Goed gedaan! Je hebt de pickroutes heel kort gemaakt."
+            "value": "做得好！ 您通过为货物选择最理想的存储位置，减少了在仓库中的行程时间。"
         },
         {
             "key": "gameover-fail",
-            "value": "Oh nee! De pickroutes zijn te lang."
+            "value": "不好了！ 您为货物选择的存储位置不是最佳的，并且增加了在仓库中的行程时间。"
         },
         {
             "key": "gameover-header",
-            "value": "Scorebord"
+            "value": "记分牌"
         },
         {
             "key": "gameover-header-products",
-            "value": "Producten"
+            "value": "产品"
         },
         {
             "key": "gameover-header-result",
-            "value": "Resultaat"
+            "value": "结果"
         },
         {
             "key": "gameover-header-score",
-            "value": "Score  "
+            "value": "分数"
         },
         {
             "key": "gameover-total",
-            "value": "Totaal:"
+            "value": "共计:"
         },
         {
             "key": "gameover-button-reset",
-            "value": "Opnieuw?"
+            "value": "再试一次？"
         }
     ]
 }
