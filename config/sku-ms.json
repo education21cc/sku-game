@@ -9,179 +9,179 @@
     "translations": [
         {
             "key": "intro-header",
-            "value": "ABC Analyse"
+            "value": "SKU itulah perkataan!  "
         },
         {
             "key": "intro-description",
-            "value": "De goederen moeten op de juiste plek in het warehouse worden opgeslagen. Kijk op de lijst in het WMS wat A, B of C producten zijn (fast-, medium-, slow movers). "
+            "value": "Gudang perlu diisi!  Rujuk WMS Sistem Pengurusan Gudang untuk mengetahui apa yang berlaku."
         },
         {
             "key": "intro-text1",
-            "value": "Pak de dozen uit de rij bovenaan. Check in het WMS (lijst aan de rechterkant) wat de inhoud is."
+            "value": "Ambil kotak dari kawasan luar.  Periksa kandungannya di WMS Sistem Pengurusan Gudang."
         },
         {
             "key": "intro-text2",
-            "value": "Plaats de dozen in de schappen en zorg voor zo kort mogelijke looproutes naar de uitgang (outbound)"
+            "value": "Letakkan kotak di rak di gudang.  Perhatikan jarak rak ke kawasan keluar."
         },
         {
             "key": "intro-text3",
-            "value": "Sommige producten worden niet verkocht. Plaats die buiten het warehouse, aan de linkerkant."
+            "value": "Beberapa produk tidak akan dijual.  Letakkannya di luar di kawasan buang."
         },
         {
             "key": "intro-start",
-            "value": "Start"
+            "value": "Mulakan"
         },
         {
             "key": "sound-on",
-            "value": "Geluid aan"
+            "value": "Mula berbunyi"
         },
         {
             "key": "button-complete",
-            "value": "Klaar"
+            "value": "Siap"
         },
         {
             "key": "category-header-a",
-            "value": "A. Fast movers, vaak verkocht"
+            "value": "A. Bergerak pantas"
         },
         {
             "key": "category-header-b",
-            "value": "B. Medium movers"
+            "value": "B. bergerak sederhana"
         },
         {
             "key": "category-header-c",
-            "value": "C. Slow movers, weinig verkocht"
+            "value": "C. Pergerakan perlahan"
         },
         {
             "key": "category-header-d",
-            "value": "D. Niet verkocht"
+            "value": "D. Tidak bergerak"
         },
         {
             "key": "sku-velocity-profile",
-            "value": "ABC overzicht"
+            "value": "Profil halaju SKU"
         },
         {
             "key": "frequently-sold-with",
-            "value": "Vaak verkocht met {0}"
+            "value": "Sering dijual bersama dengan {0}"
         },
         {
             "key": "status-selected",
-            "value": "Geselecteerd: {0} ({1})"
+            "value": "Dipilih: {0} ({1})"
         },
         {
             "key": "product-description-clothes-iron",
-            "value": "Kleren"
+            "value": "Seterika pakaian"
         },
         {
             "key": "product-description-digital-camera",
-            "value": "Digitale camera"
+            "value": "Kamera digital"
         },
         {
             "key": "product-description-smoke-detector",
-            "value": "Rookmelder"
+            "value": "Pengesan asap"
         },
         {
             "key": "product-description-battery-charger",
-            "value": "Batterij oplader"
+            "value": "Pengecas bateri"
         },
         {
             "key": "product-description-vr-headset",
-            "value": "VR Headset"
+            "value": "VR headset"
         },
         {
             "key": "product-description-plasma-tv",
-            "value": "Plasma TV"
+            "value": "TV Plasma"
         },
         {
             "key": "product-description-speaker-system",
-            "value": "Speakers"
+            "value": "Sistem pembesar suara"
         },
         {
             "key": "product-description-washing-machine",
-            "value": "Wasmachine"
+            "value": "Mesin basuh"
         },
         {
             "key": "product-description-refrigerator",
-            "value": "Koelkast"
+            "value": "Peti sejuk"
         },
         {
             "key": "product-description-mixer",
-            "value": "Staafmixer"
+            "value": "Pengadun berdiri"
         },
         {
             "key": "product-description-telephone",
-            "value": "Telefoon"
+            "value": "Telefon"
         },
         {
             "key": "product-description-casette-player",
-            "value": "Casette recorder"
+            "value": "Pemain kaset"
         },
         {
             "key": "order-no",
-            "value": "Ordernr."
+            "value": "Pesanan no"
         },
         {
             "key": "picking-lists",
-            "value": "Picklijst"
+            "value": "Bil muatan"
         },
         {
             "key": "first-place-goods",
-            "value": "Als eerste: plaats alle dozen in het warehouse"
+            "value": "Bermula dengan meletakkan semua barang di gudang!"
         },
         {
             "key": "gameover-placed-correct",
-            "value": "{count} goed geplaatst"
+            "value": "{kiraan} diletakkan dengan betul"
         },
         {
             "key": "gameover-pair",
-            "value": "Paar:"
+            "value": "pasangan"
         },
         {
             "key": "gameover-pair-placed",
-            "value": "Naast elkaar geplaatst"
+            "value": "Diletakkan bersebelahan"
         },
         {
             "key": "gameover-pair-notplaced",
-            "value": "Niet naast elkaar geplaatst"
+            "value": "Tidak diletakkan bersebelahan"
         },
         {
             "key": "gameover-non-moving-products",
-            "value": "Niet verkochte producten"
+            "value": "Produk tidak bergerak"
         },
         {
             "key": "gameover-mistakes-made",
-            "value": "Fouten gemaakt"
+            "value": "kesilapan yang dilakukan"
         },
         {
             "key": "gameover-success",
-            "value": "Goed gedaan! Je hebt de pickroutes heel kort gemaakt."
+            "value": "Syabas!  Anda mengurangkan masa perjalanan di gudang dengan memilih lokasi penyimpanan barang yang paling optimum."
         },
         {
             "key": "gameover-fail",
-            "value": "Oh nee! De pickroutes zijn te lang."
+            "value": "Oh tidak!  Lokasi penyimpanan yang anda pilih untuk barang bukannya optimum dan meningkatkan masa perjalanan di gudang."
         },
         {
             "key": "gameover-header",
-            "value": "Scorebord"
+            "value": "Papan Skor"
         },
         {
             "key": "gameover-header-products",
-            "value": "Producten"
+            "value": "Produk"
         },
         {
             "key": "gameover-header-result",
-            "value": "Resultaat"
+            "value": "Keputusan"
         },
         {
             "key": "gameover-header-score",
-            "value": "Score  "
+            "value": "Markah"
         },
         {
             "key": "gameover-total",
-            "value": "Totaal:"
+            "value": "Jumlah:"
         },
         {
             "key": "gameover-button-reset",
-            "value": "Opnieuw?"
+            "value": "Cuba lagi?"
         }
     ]
 }
