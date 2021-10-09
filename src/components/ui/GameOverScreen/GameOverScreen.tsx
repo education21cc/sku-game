@@ -36,7 +36,6 @@ const GameOverScreen = () => {
     newData.levelsCompleted = [
         { level, score: totalScore, maxScore }
     ]
-    console.log(newData);
     send({
         type: 'setGameData',
         data: newData
