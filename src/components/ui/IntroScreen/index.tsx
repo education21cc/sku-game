@@ -4,6 +4,7 @@ import "./introScreen.css"
 import { AppContext } from "components/context/AppProvider";
 import { GameState } from "reducers/gameStateReducer";
 import { useTranslationStore } from "stores/translations";
+import GreenButton from "../buttons/GreenButton";
 
 const IntroScreen = () => {
   const {state, dispatch} = useContext(AppContext);
@@ -39,9 +40,9 @@ const IntroScreen = () => {
           </div>
         </div>
       </div>
-        <button onClick={onClick} className="button">
-        {translations.getText("intro-start")}
-        </button>
+        <GreenButton onClick={onClick} className="button">
+          {translations.getText("intro-start")}
+        </GreenButton>
     </div>
   )
 }

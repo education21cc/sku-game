@@ -3,7 +3,7 @@ import './App.css';
 import Scene from 'components/Scene';
 import * as PIXI  from 'pixi.js';
 import IPad from 'components/ui/IPad';
-import StartButton from 'components/ui/StartButton';
+import StartButton from 'components/ui/buttons/StartButton';
 import { AppProvider, AppContext } from 'components/context/AppProvider';
 import StatusText from 'components/ui/StatusText';
 import Settings from 'components/ui/Settings';

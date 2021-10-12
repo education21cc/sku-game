@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { AppContext } from "components/context/AppProvider";
 import { GameState } from "reducers/gameStateReducer";
 import { useTranslationStore } from "stores/translations";
-import './startButton.css';
+import GreenButton from "./GreenButton";
+import './styles/startButton.css';
 
 const StartButton = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -28,7 +29,7 @@ const StartButton = () => {
 
   switch (state.gameState) {
     case GameState.placingBoxes:
-      return <button onClick={handleClick} className="start-button">{translations.getText("button-complete")}</button>;
+      return <GreenButton onClick={handleClick} className="start-button">{translations.getText("button-complete")}</GreenButton>;
     default:
       return null;
   }

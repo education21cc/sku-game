@@ -43,17 +43,8 @@
 }
 
 .intro-screen .button {
-  text-align: center;
   margin-top: -16px;
   margin-bottom: 16px;
-  padding: 12px 32px;
-  background: #82BC5D;
-  border: 0;
-  border-radius: 4px;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: larger;
-  font-weight: bold;  
 }
 
 .intro-screen .text ul {
