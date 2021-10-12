@@ -1,0 +1,21 @@
+.blue-button {
+
+  background: transparent;
+  border: 1px;
+  border-image-slice: 10 8 10 8;
+  border-image-width: 10px 8px 10px 8px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: stretch stretch; 
+  border-image-source: url('ButtonBlue01.png');
+}
+
+.blue-button span {
+  padding: 8px 32px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;    
+  background: url('ButtonBlue01-background.png');
+  display: block;
+}

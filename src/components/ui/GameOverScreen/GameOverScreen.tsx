@@ -7,6 +7,7 @@ import { Categories, WMSData } from "reducers/wmsReducer";
 import { useTranslationStore } from "stores/translations";
 import "./gameOverScreen.css"
 import { send } from "components/playerBridge";
+import BlueButton from "../buttons/BlueButton";
 
 const GameOverScreen = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -182,9 +183,9 @@ const GameOverScreen = () => {
           </div>
         </div>
       </div>
-        <button onClick={handleReset} className="button">
+        <BlueButton onClick={handleReset} className="button">
           {translations.getText("gameover-button-reset")}
-        </button>
+        </BlueButton>
     </div>
   )
 }
