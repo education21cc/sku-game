@@ -1,5 +1,5 @@
 
-import React, {  useEffect } from 'react';
+import React, {  useEffect, useRef } from 'react';
 import './style/styles.css';
 import { ReactComponent as CloseIcon } from './style/close.svg';
 
@@ -25,6 +25,7 @@ declare global {
 
 const PlayerBridge = (props: Props) => {
   const {gameDataReceived, disableBackButton} = props;
+  const interval = useRef<number>()
 
   useEffect(() => {
     /* Add the following to index.html
@@ -46,17 +47,19 @@ const PlayerBridge = (props: Props) => {
       return window.GAMEDATA;
     }
 
+    // cordova iab just sets window.GAMEDATA
     const check = () => {
       if (window.GAMEDATA) {
-        clearInterval(interval);
+        clearInterval(interval.current);
         gameDataReceived(window.GAMEDATA);
       }
     }
-    // cordova iab just sets window.GAMEDATA
-    let interval = setInterval(check, 250);
+    if (!interval.current) {
+      interval.current = window.setInterval(check, 250);
+    }
 
     return () => {
-      clearInterval(interval);
+      clearInterval(interval.current);
     }
   }, [gameDataReceived]);
 
