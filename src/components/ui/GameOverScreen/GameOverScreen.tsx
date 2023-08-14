@@ -34,9 +34,11 @@ const GameOverScreen = () => {
     const level = 1;
     // @ts-ignore
     const newData: GameData = { ...window.GAMEDATA};
-    newData.levelsCompleted = [
-        { level, score: totalScore, maxScore }
-    ]
+    newData.levelsCompleted = [{ 
+      level, 
+      score: Math.max(totalScore, 0), 
+      maxScore
+    }]
     send({
         type: 'setGameData',
         data: newData
